@@ -31,7 +31,6 @@ $.fn.togglr = function(passedOptions) {
         });
 
         $this.on("click", function(event) {
-            console.table(defintionList);
             defintionList.forEach(function(item){
                 $(item.key).toggleClass(item.class);
             });
