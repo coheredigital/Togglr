@@ -7,11 +7,18 @@ $.fn.togglr = function(passedOptions) {
         var targetElements = $this.data("togglr-target");
         var toggleClasses = $this.data("togglr-class");
 
+        if (!targetElements || !toggleClasses) {
+            return;
+        }
+
         var elementList = targetElements.split(",");
         var classes = toggleClasses.split(",");
-        
-
         var defintionList = [];
+
+        if (elementList.length == 0) {
+            return;
+        }
+
         elementList.forEach(function (element, i) {
             defintionList.push({
                 key: element,
