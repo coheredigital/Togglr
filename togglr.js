@@ -4,8 +4,8 @@ $.fn.togglr = function(passedOptions) {
     $elements.each(function() {
         var $this = $(this);
 
-        var targetElements = $this.data("toggle-target");
-        var toggleClasses = $this.data("toggle-class");
+        var targetElements = $this.data("togglr-target");
+        var toggleClasses = $this.data("togglr-class");
 
         var elementList = targetElements.split(",");
         var classes = toggleClasses.split(",");
@@ -25,7 +25,7 @@ $.fn.togglr = function(passedOptions) {
                 $(item.key).toggleClass(item.class);
             });
 
-            if ($this.data("toggle-prevent-default")) {
+            if ($this.data("togglr-prevent-default")) {
                 event.preventDefault();
             }
         });
