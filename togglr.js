@@ -1,6 +1,3 @@
-// toggle buttons
-
-// instersection observer class controlls
 $.fn.togglr = function(passedOptions) {
 	var $elements = $(this);
 	
